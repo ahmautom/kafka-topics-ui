@@ -39,7 +39,7 @@
                             <div flex style="width:100%; margin-top:0px">
 
                                 <div ng-if="selectedMenuItem == 'data'"
-                                     ng-include="'src/kafka-topics/view/templates/topic-data.html'"
+                                     ng-include="'topic-data.html'"
                                      ng-hide="topic.totalMessages == 0"></div>
 
                                 <!-- EMPTY TOPIC MESSAGE / TODO put me on data -->
@@ -47,9 +47,9 @@
                                     There are no messages in this topic.
                                 </div>
 
-                                <div ng-show="selectedMenuItem == 'overview'" ng-include="'src/kafka-topics/view/templates/topic-overview.html'" layout-margin></div>
+                                <div ng-show="selectedMenuItem == 'overview'" ng-include="'topic-overview.html'" layout-margin></div>
 
-                                <div ng-if="selectedMenuItem == 'configuration'" ng-include="'src/kafka-topics/view/templates/topic-configuration.html'" layout-margin></div>
+                                <div ng-if="selectedMenuItem == 'configuration'" ng-include="'topic-configuration.html'" layout-margin></div>
 
                             </div>
                         </div>

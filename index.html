@@ -21,7 +21,8 @@
   <link rel="stylesheet" href="src/assets/css/styles.css">
 </head>
 
-<body ng-app="angularAPP" ng-cloak>
+<body>
+<div ng-app="angularAPP" ng-cloak>
 
 <header class="header" style="background:{{cluster.COLOR}}">
   <div layout="row" layout-xs="column">
@@ -32,7 +33,7 @@
     </div>
     <span flex></span>
     <div layout="row">
-      <div ng-include="'src/kafka-topics/dashboard-components/select-cluster/select-cluster.html'"></div>
+      <div ng-include="'select-cluster.html'"></div>
       <a ng-href="#/healthcheck" class="md-button"> <i class="fa fa-cog" aria-hidden="true"></i> </a>
     </div>
   </div>
@@ -40,7 +41,7 @@
 
 <!--if env.js is not properly defined-->
 <div layout="row" flex="100" ng-show="missingEnvJS" ng-cloak>
-  <div ng-include="'src/kafka-topics/dashboard-components/missing-env/missing-env.html'"></div>
+  <div ng-include="'missing-env.html'"></div>
 </div>
 
 <!--Main Content here-->
@@ -66,7 +67,7 @@
 <!--CUSTOM-FOOTER-->
 
 <!-- analytics -->
-
+</div>
 <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
 <script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>

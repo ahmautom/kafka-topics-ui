@@ -1,5 +1,7 @@
 'use strict';
 
+//@require "./src/**/*.html"
+
 var angularAPP = angular.module('angularAPP', [
   'ngRoute',
   'ngMaterial',
@@ -70,31 +72,31 @@ $locationProvider.html5Mode();
   $locationProvider.hashPrefix('');
   $routeProvider
     .when('/', {
-      templateUrl: 'src/kafka-topics/home/home.html',
+      templateUrl: 'home.html',
       controller: 'HomeCtrl'
     })
     .when('/healthcheck', {
-      templateUrl: 'src/kafka-topics/healthcheck/healthcheck.html',
+      templateUrl: 'healthcheck.html',
       controller: 'HealthcheckCtrl'
     })
     .when('/cluster/:cluster', {
-      templateUrl: 'src/kafka-topics/home/home.html',
+      templateUrl: 'home.html',
        controller: 'HomeCtrl'
     })
-    .when('/cluster/:cluster/create-topic', {
-      templateUrl: 'src/kafka-topics/new/new-topic.html',
-      controller: 'HeaderCtrl'
-    })
+    // .when('/cluster/:cluster/create-topic', {
+    //   templateUrl: 'new-topic.html',
+    //   controller: 'HeaderCtrl'
+    // })
     .when('/cluster/:cluster/topic/:topicCategoryUrl/:topicName/', {
-        templateUrl: 'src/kafka-topics/view/view.html',
+        templateUrl: 'view.html',
         controller: 'ViewTopicCtrl'
       })
     .when('/cluster/:cluster/topic/:topicCategoryUrl/:topicName/:menuItem', {
-      templateUrl: 'src/kafka-topics/view/view.html',
+      templateUrl: 'view.html',
       controller: 'ViewTopicCtrl'
     })
     .when('/cluster/:cluster/topic/:topicCategoryUrl/:topicName/:menuItem/:selectedTabIndex', {
-      templateUrl: 'src/kafka-topics/view/view.html',
+      templateUrl: 'view.html',
       controller: 'ViewTopicCtrl'
     }).otherwise({
     redirectTo: '/'

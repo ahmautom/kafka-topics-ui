@@ -23,8 +23,8 @@ topicsListModule.directive('topicsList', function(templates) {
 
 topicsListModule.factory('templates', function() {
   return {
-    compact: 'src/kafka-topics/list/compact-topics-list.html',
-    home:  'src/kafka-topics/list/topics-list.html',
+    compact: 'compact-topics-list.html',
+    home:  'topics-list.html',
   };
 });
 
